@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Chiasson - Application for Skool</title>
+    <title>Eric Chiasson - Resume</title>
     <style>
         /* --- General Styles --- */
         body {
@@ -35,36 +35,7 @@
             text-decoration: underline;
         }
 
-        /* --- Tab Navigation --- */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #333;
-        }
-        .tab-button {
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-            color: #AAAAAA;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s, border-bottom 0.3s;
-            border-bottom: 3px solid transparent;
-        }
-        .tab-button.active {
-            color: #FFFFFF;
-            border-bottom: 3px solid #58A6FF;
-        }
-
         /* --- Content Sections --- */
-        .content-section {
-            display: none; /* Hide sections by default */
-        }
-        .content-section.active {
-            display: block; /* Show active section */
-        }
         h2 {
             color: #FFFFFF;
             border-bottom: 1px solid #333;
@@ -101,15 +72,10 @@
         </div>
     </header>
 
-    <div class="tabs">
-        <button class="tab-button active" onclick="showSection('resume')">Resume</button>
-        <button class="tab-button" onclick="showSection('cover-letter')">Cover Letter</button>
-    </div>
-
-    <div id="resume" class="content-section active">
+    <div id="resume">
         <h2>Professional Summary</h2>
         <p>
-            Growth-driven product and community advocate with 10+ years of experience in e-commerce, AI automation, and customer success. A dedicated Skool power user passionate about helping people, building community, and providing positive user experiences. Skilled in triaging technical issues, writing clear documentation, and creating AI-first workflows to improve user satisfaction and operational efficiency.
+            Growth-driven product and community advocate with 10+ years of experience in e-commerce, AI automation, and customer success. A dedicated power user of community-driven platforms, passionate about helping people, building community, and providing positive user experiences. Skilled in triaging technical issues, writing clear documentation, and creating AI-first workflows to improve user satisfaction and operational efficiency.
         </p>
         
         <h2>Skills & Expertise</h2>
@@ -150,50 +116,6 @@
             <li>Direct Response Marketing Mentorship</li>
         </ul>
     </div>
-
-    <div id="cover-letter" class="content-section">
-        <h2>Application for Customer Support Rep</h2>
-        
-        <p><strong>To the Skool Ops Team,</strong></p>
-        
-        <p>I'm writing to apply for the Customer Support Rep position. As a dedicated Skool user who has not only used the platform but actively analyzed its community dynamics, I was thrilled to see a role focused on helping users and providing good vibes.</p>
-        
-        <p>My experience aligns directly with what you’re looking for:</p>
-        
-        <ul>
-            <li><strong>Helping People in the Community:</strong> As a founder, I was responsible for everything from user onboarding to dispute resolution. I'm passionate about turning a user's problem into a positive interaction.</li>
-            <li><strong>Triaging Technical Issues:</strong> My self-taught background in Python and Apps Script, along with my experience building various web tools and automation, has given me a solid foundation for diagnosing technical issues and communicating them effectively to an engineering team.</li>
-            <li><strong>Writing Help Docs:</strong> I’ve built entire operational playbooks and support documentation for my teams using tools like Notion and Loom, and I enjoy making complex topics easy to understand.</li>
-        </ul>
-        
-        <p>But most importantly, I understand the Skool culture. I'm the user who changed his profile to the Skool cat to test engagement, who analyzed the meta-narrative of community posts, and who understands the platform's power to create real-world connections. I don’t just want to answer support tickets; I want to contribute to the community and help Skool grow.</p>
-        
-        <p>Thank you for your time and consideration.</p>
-        
-        <p>Best,<br>Eric Chiasson</p>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all content sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Deactivate all tab buttons
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
-
-            // Show the selected section
-            document.getElementById(sectionId).classList.add('active');
-
-            // Activate the clicked button
-            document.querySelector(`.tab-button[onclick="showSection('${sectionId}')"]`).classList.add('active');
-        }
-    </script>
 
 </body>
 </html>
